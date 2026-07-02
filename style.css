@@ -1,0 +1,681 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+button {
+  -webkit-animation: shadow-drop-2-center 0.4s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: shadow-drop-2-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.contenedor {
+  margin: 0 auto;
+}
+
+.portada {
+  position: relative;
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 77%, transparent 100%);
+}
+
+.textoPortada {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000000;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1;
+}
+
+.textoNovios {
+  line-height: 3.1rem;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000000;
+  text-align: center;
+  font-family: "Great Vibes", cursive;
+  font-size: 50px;
+  letter-spacing: 0.1rem;
+}
+
+.textoNovios p {
+  font-family: "Great Vibes", cursive;
+}
+
+.anillo {
+  position: absolute;
+  top: 79%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 8%;
+  width: 10%;
+}
+
+.reproducir {
+  margin: auto 0;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.reproducir button {
+  border-radius: 50%;
+  border: solid 1px #ffffff;
+  width: 70px;
+  height: 70px;
+}
+
+.reproducir svg {
+  width: 100%;
+  height: 100%;
+  color: #f1cb9d;
+}
+
+.musica {
+  margin: 0 auto;
+  text-align: center;
+  opacity: 0;
+}
+
+.contador {
+  position: relative;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%);
+  width: 90%;
+  height: 100%;
+  margin-bottom: 15%;
+}
+
+.contador p {
+  font-size: 30px;
+  font-family: "Great Vibes", cursive;
+  padding: 10px;
+  margin-bottom: 10%;
+  margin-top: 10%;
+}
+
+.fecha {
+  position: relative;
+  text-align: center;
+  color: #000000;
+  font-size: 50px;
+  margin-bottom: 10%;
+  font-family: "Great Vibes", cursive;
+}
+
+.conteo {
+  font-size: 40px;
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(0, 0, 0);
+  margin-bottom: 5%;
+  font-family: "Great Vibes", cursive;
+}
+
+section {
+  width: 100%;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  -webkit-animation: shadow-drop-2-center 0.4s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: shadow-drop-2-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+td {
+  border: 3px solid #ffffff;
+  border-bottom: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #f1cb9d;
+  width: 20%;
+  color: #000000;
+  padding: 5px;
+  padding-top: 20px;
+  font-size: 30px;
+  text-align: center;
+  justify-content: center;
+}
+
+th {
+  border: 3px solid #ffffff;
+  border-top: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #f1cb9d;
+  color: #000000;
+  text-align: center;
+  justify-content: center;
+  padding: 5px;
+  padding-bottom: 20px;
+  font-size: 20px;
+  font-family: "Great Vibes", cursive;
+}
+
+.bienvenida {
+  position: relative;
+  text-align: center;
+
+  view-timeline-name: --container7;
+  view-timeline-axis: block;
+  animation-timeline: --container7;
+  animation-name: moveB;
+}
+
+.bienvenida img {
+  width: 100%;
+}
+
+.bienvenida small {
+  margin-left: 50%;
+}
+
+.bienvenida .card {
+  border: 5px ridge #f1cb9d;
+}
+
+.bienvenida h5 {
+  font-family: "Great Vibes", cursive;
+  font-size: 40px;
+}
+
+.bienvenida p {
+  text-align: center;
+  line-height: 1rem;
+}
+
+.botonesVestimenta button {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.cronograma {
+  position: relative;
+  text-align: center;
+  view-timeline-name: --container7;
+  view-timeline-axis: block;
+}
+
+.tituloCronograma {
+  margin: 0 auto;
+  width: 90%;
+  padding: 5%;
+}
+
+.tituloCronograma h2 {
+  font-size: 50px;
+  font-family: "Great Vibes", cursive;
+  color: #000000;
+  margin-bottom: 5%;
+}
+
+.tituloCronograma p {
+  color: #000000;
+  font-size: 25px;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 5%;
+}
+
+.tituloCronograma svg {
+  color: #000000;
+  width: 50px;
+  height: 50px;
+}
+
+.tituloC {
+  position: relative;
+  text-align: center;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.timeline p {
+  line-height: 2rem;
+}
+
+.container {
+  padding: 20px;
+  position: relative;
+  width: 65%;
+}
+
+.container:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.container:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.container:nth-child(3) {
+  animation-delay: 2s;
+}
+
+.container:nth-child(4) {
+  animation-delay: 3s;
+}
+
+.container:nth-child(5) {
+  animation-delay: 4s;
+}
+
+.container:nth-child(6) {
+  animation-delay: 5s;
+}
+
+.text-box {
+  padding: 10px 20px;
+  background: #ffffff;
+  position: relative;
+  border-radius: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.text-box h2,
+h5 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.left-container {
+  left: 0;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: #ffffff;
+  left: 15%;
+  top: 0;
+
+  view-timeline-name: --container1;
+  view-timeline-axis: block;
+  animation-timeline: --container1;
+
+  animation-name: moveline;
+}
+
+.text-box h2 {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.text-box small p {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.left-container-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 20px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #ffffff;
+  left: -15px;
+}
+
+.vestimenta {
+  position: relative;
+  text-align: center;
+  padding: 5%;
+  background-color: #f2f2f2;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  width: 100%;
+  justify-content: center;
+  view-timeline-name: --container3;
+  view-timeline-axis: block;
+  animation-timeline: --container3;
+  animation-name: movevestimenta;
+}
+
+.colores {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8%;
+  margin-top: 20px;
+}
+
+.color {
+  margin-top: 3%;
+  margin-bottom: 3%;
+  border: 1px solid #9e9e9e;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.c1 {
+  background-color: #ffe5d9;
+}
+
+.c2 {
+  background-color: #ffd7ba;
+}
+
+.c3 {
+  background-color: #fec89a;
+}
+
+.c4 {
+  background-color: #f9a27c;
+}
+
+.c5 {
+  background-color: #e38f65;
+}
+
+.tituloV {
+  font-size: 50px;
+  color: black;
+  font-family: "Great Vibes", cursive;
+  margin-bottom: 10px;
+}
+
+.vestimenta h6 {
+  margin-top: 5%;
+}
+
+.vestimenta p,
+h6 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+
+.ubicaciones {
+  position: relative;
+  text-align: center;
+  margin-top: 15%;
+  width: 100%;
+
+  view-timeline-name: --container7;
+  view-timeline-axis: block;
+  animation-timeline: --container7;
+  animation-name: moveC;
+}
+
+.ubicaciones h5 {
+  font-family: "Great Vibes", cursive;
+  font-size: 40px;
+}
+
+.ubicaciones p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+
+.ubicaciones h6 {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+
+.nota {
+  margin-bottom: 5%;
+  margin-top: -2%;
+}
+
+.card {
+  margin: 0 auto;
+  background-color: #e0d4ae;
+  width: 0%;
+  height: 250px;
+  margin-bottom: 10%;
+  border: 3px ridge #dcb27f;
+
+  -webkit-animation: shadow-drop-2-center 0.4s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: shadow-drop-2-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.hotel {
+  background-color: #c7d6bf;
+}
+
+.boton {
+  margin: 0 auto;
+  margin-top: 3%;
+  margin-bottom: 10%;
+}
+
+.mesa {
+  position: relative;
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 5%;
+  margin-top: 15%;
+  view-timeline-name: --container7;
+  view-timeline-axis: block;
+}
+
+.mesa svg {
+  margin-bottom: 5%;
+}
+
+.regalo {
+  margin-bottom: 5%;
+}
+
+.tituloMesa {
+  font-size: 40px;
+  color: black;
+  font-family: "Great Vibes", cursive;
+}
+
+.frase {
+  margin-bottom: 5%;
+  margin-bottom: 8%;
+  font-size: 15px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.numeroR {
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.padrinos {
+  position: relative;
+  text-align: center;
+  margin-top: 15%;
+  width: 100%;
+  view-timeline-name: --container8;
+  view-timeline-axis: block;
+  animation-timeline: --container8;
+  animation-name: moveC;
+}
+
+.nombresPadrinos {
+  font-size: 30px;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+  padding: 10%;
+}
+
+.padrinos h2 {
+  margin-top: 2%;
+  font-size: 35px;
+  font-family: "Great Vibes", cursive;
+}
+
+.padrinos p {
+  text-align: center;
+  font-size: 16px;
+  padding: 3%;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.confirmar {
+  position: relative;
+  text-align: center;
+  padding: 5%;
+  margin-top: 5%;
+  width: 100%;
+}
+
+.tituloConfirmar h2 {
+  color: #000000;
+  font-family: "Great Vibes", cursive;
+  font-size: 40px;
+}
+
+.tituloConfirmar p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  color: #000000;
+}
+
+.tituloConfirmar {
+  margin-bottom: 10%;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  .contador {
+    width: 100%;
+  }
+
+  .portada {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .vestimenta {
+    width: 100%;
+  }
+
+  .textoNovios {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .textoNovios {
+    font-size: 60px;
+  }
+}
+
+/* Evento izquierdo (icono y texto) */
+.event-content {
+  display: flex;
+  align-items: center;
+  max-width: 40%;
+  line-height: 2rem;
+}
+
+.event-content.left {
+  text-align: right;
+  margin-left: 7px;
+}
+
+.event-content.right {
+  text-align: left;
+  margin-right: 0px;
+}
+
+/* Icono */
+.event-content .icon img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.event-content.left .icon img {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+/* Texto */
+.event-content .text h2 {
+  font-size: 1.2em;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Horario */
+.time {
+  flex: 0 0 20%;
+  text-align: center;
+}
+
+.time.left {
+  text-align: right;
+  margin-left: 25px;
+}
+
+.time.right {
+  text-align: left;
+  margin-right: 25px;
+}
+
+.time p {
+  font-size: 1em;
+  margin: 0;
+  color: #000000;
+  font-family: "Great Vibes", cursive;
+  font-size: 23px;
+}
+
+.timeline-second:after {
+  font-size: 1.9em; /* Tamaño del símbolo */
+  color: #d4af37; /* Mismo color que la línea */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-second:after {
+  content: "♥"; /* Corazón */
+  bottom: -0.8em; /* Ajuste para que quede justo al final de la línea */
+}
+
+.icon p {
+  font-family: "Great Vibes", cursive;
+  font-size: 23px;
+  color: #000000;
+}
+
+.botones button {
+  margin-bottom: 20px;
+}
