@@ -1,106 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="es">
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    
     <title>Invitacion Elegante</title>
-</head>
-
-<body>
+  </head>
+  <body>
+    <!-- Todos los textos, fotos y links se editan en contenido.json; aquí solo van variables -->
+    <template id="plantilla">
 
     <div class="contenedor">
         <div class="portada">
-            <img src="recursos/portada1.jpeg" width="100%" height="100%" alt="portada">
-            <div class="textoPortada">Nuestra Boda</div>
-            <div class="textoNovios">Dulce <p>y</p> Jaime </div>
+            <img src="{{portada.foto}}" width="100%" height="100%" alt="{{portada.fotoAlt}}">
+            <div class="textoPortada">{{portada.evento}}</div>
+            <div class="textoNovios">{{portada.nombre1}} <p>{{portada.conector}}</p> {{portada.nombre2}} </div>
         </div>
 
         <div class="reproducir">
-            <button onclick="PlayAudio()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-play-circle-fill" viewBox="0 0 16 16">
-                    <path
-                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z" />
+            <button onclick="PlayAudio()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"></path>
                 </svg></button>
         </div>
 
         <div class="contador">
-            <p class="frase">
-                Despues de tantas historias, risas y sueños,
-                estamos listos para dar el gran paso y unir nuestras vidas
-                para siempre
-            </p>
-            <div class="fecha">05 - Julio - 2025</div>
-            <div class="conteo">
-                Nuestra boda es en:
-            </div>
+            <p class="frase">{{cuentaRegresiva.frase}}</p>
+            <div class="fecha">{{cuentaRegresiva.fecha}}</div>
+            <div class="conteo">{{cuentaRegresiva.titulo}}</div>
 
             <section>
                 <table align="center" width="90%">
-                    <tr>
+                    <tbody><tr>
                         <td><span id="days"></span></td>
                         <td><span id="hours"></span></td>
                         <td><span id="minutes"></span></td>
                         <td><span id="seconds"></span></td>
                     </tr>
                     <tr>
-                        <th>Días</th>
-                        <th>Horas</th>
-                        <th>Minutos</th>
-                        <th>Segundos</th>
+                        <th>{{cuentaRegresiva.dias}}</th>
+                        <th>{{cuentaRegresiva.horas}}</th>
+                        <th>{{cuentaRegresiva.minutos}}</th>
+                        <th>{{cuentaRegresiva.segundos}}</th>
                     </tr>
-                </table>
+                </tbody></table>
             </section>
         </div>
 
         <div class="bienvenida">
             <div class="card" style="width: 80%; height: 50%; align-items: center;">
                 <div class="card-body">
-                    <h5 class="card-title">Mas valen dos que uno...</h5>
-                    <p class="card-text">
-                        Porque obtiene más fruto<br> de su esfuerzo
-                    </p>
+                    <h5 class="card-title">{{bienvenida.titulo}}</h5>
+                    <p class="card-text">{{bienvenida.verso1}}</p>
 
-                    <p>
-                        Si caen, el uno levanta al otro.<br>
-                    </p>
+                    <p>{{bienvenida.verso2}}</p>
 
-                    <p>
-                        ¡Ay del que cae <br>y no tiene quien lo levante!
-                    </p>
+                    <p>{{bienvenida.verso3}}</p>
 
-                    <p>
-                        Uno solo puede ser vencido,<br> pero dos pueden resistir.
-                    </p>
+                    <p>{{bienvenida.verso4}}</p>
 
-                    <p>
-                        ¡La cuerda de tres hilos <br> no se rompe fácilmente!
-                    </p>
-                    <small>Eclesiastés 4:9-12</small>
+                    <p>{{bienvenida.verso5}}</p>
+                    <small>{{bienvenida.cita}}</small>
 
-                    <img src="recursos/001-12.jpg" alt="">
+                    <img src="{{bienvenida.foto}}" alt="">
                 </div>
             </div>
         </div>
 
 
         <div class="vestimenta">
-            <div class="tituloV">
-                Codigo de vestimenta
-            </div>
+            <div class="tituloV">{{vestimenta.titulo}}</div>
 
             <div class="textoVestimenta">
-                <h1>Beach Formal</h1>
+                <h1>{{vestimenta.codigo}}</h1>
             </div>
 
             <div class="colores">
@@ -110,25 +87,18 @@
             </div>
 
             <div class="recomendacion">
-                <h6>
-                    Hombre: Guayabera <br>
-                    Te dejamos unas ideas de pinterest
-                </h6>
+                <h6>{{vestimenta.recomendacion}}</h6>
             </div>
 
             <div class="botonesVestimenta">
                 
                 <button type="button" class="btn btn-light">
-                    <a href="">
-                        Ver ejemplos de Hombre
-                    </a>
+                    <a href="{{vestimenta.linkHombre}}">{{vestimenta.botonHombre}}</a>
             
                 </button>
 
                 <button type="button" class="btn btn-light">
-                    <a href="">
-                        Ver ejemplos de Mujer
-                    </a>
+                    <a href="{{vestimenta.linkMujer}}">{{vestimenta.botonMujer}}</a>
                 </button>
 
             </div>
@@ -139,82 +109,60 @@
 
             <div class="card" style="width: 80%; height: 50%; align-items: center;">
                 <div class="card-body">
-                    <h5 class="card-title">Ubicacion del evento</h5>
-                    <p class="card-text">En el corazón de Mazatlán, junto al hermoso mar,
-                        nos reuniremos en este espacio único para celebrar un día
-                        lleno de amor y felicidad. Esperamos contar con tu presencia
-                        para hacer de este momento algo inolvidable.
-                    </p>
+                    <h5 class="card-title">{{ubicaciones.titulo}}</h5>
+                    <p class="card-text">{{ubicaciones.texto}}</p>
                 </div>
 
                 <div class="card hotel" style="width: 80%; height: 50%; align-items: center;">
-                    <img src="/recursos/hotal.jpg" class="card-img-top" alt="..." style="width: 100%; padding: 10px; ">
+                    <img src="{{ubicaciones.foto}}" class="card-img-top" alt="..." style="width: 100%; padding: 10px; ">
                     <div class="card-body">
-                        <h6 class="card-title">Park Royal Beach Mazatlan</h5>
-                            <p class="card-text">Av. sabalo Cerritos 3110, Marina Mazatlan, 82100 Mazatlan, Sin.</p>
+                        <h6 class="card-title">{{ubicaciones.lugar}}</h6>
+                            <p class="card-text">{{ubicaciones.direccion}}</p>
                             <button type="button" class="btn btn-light">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                                    <path
-                                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"></path>
                                 </svg>
-                                <a href="https://maps.app.goo.gl/2bmhoV6zfvuDy2fg6">Ubicacion</a>
+                                <a href="{{ubicaciones.mapa}}">{{ubicaciones.boton}}</a>
                             </button>
                     </div>
                 </div>
 
-                <div class="nota">
-                    <small>Todos los eventos seran en el hotel Park Royal Beach</small>
-                </div>
+                <div class="nota">{{ubicaciones.nota}}</div>
 
             </div>
         </div>
 
         <div class="mesa">
-            <svg xmlns="http://www.w3.org/2000/svg" width="10%" height="10%" fill="currentColor"
-                class="bi bi-envelope-paper-heart-fill" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                    d="m3 7.5 3.5 2L8 8.75l1.5.75 3.5-2v-6A1.5 1.5 0 0 0 11.5 0h-7A1.5 1.5 0 0 0 3 1.5zM2 3.133l-.941.502A2 2 0 0 0 0 5.4v.313l2 1.173zm12 3.753 2-1.173V5.4a2 2 0 0 0-1.059-1.765L14 3.133zm-3.693 3.324L16 6.873v6.5zm5.634 4.274L8 10.072.059 14.484A2 2 0 0 0 2 16h12a2 2 0 0 0 1.941-1.516M5.693 10.21 0 13.372v-6.5zM8 1.982C9.664.309 13.825 3.236 8 7 2.175 3.236 6.336.31 8 1.982" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="10%" height="10%" fill="currentColor" class="bi bi-envelope-paper-heart-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="m3 7.5 3.5 2L8 8.75l1.5.75 3.5-2v-6A1.5 1.5 0 0 0 11.5 0h-7A1.5 1.5 0 0 0 3 1.5zM2 3.133l-.941.502A2 2 0 0 0 0 5.4v.313l2 1.173zm12 3.753 2-1.173V5.4a2 2 0 0 0-1.059-1.765L14 3.133zm-3.693 3.324L16 6.873v6.5zm5.634 4.274L8 10.072.059 14.484A2 2 0 0 0 2 16h12a2 2 0 0 0 1.941-1.516M5.693 10.21 0 13.372v-6.5zM8 1.982C9.664.309 13.825 3.236 8 7 2.175 3.236 6.336.31 8 1.982"></path>
             </svg>
-            <h2 class="tituloMesa">
-                Mesa de regalos
-            </h2>
+            <h2 class="tituloMesa">{{regalos.titulo}}</h2>
             <div class="frase">
-                <p>Que nos acompañes es lo mas importante! Y si está en su
-                    disposición realizar una muestra de cariño estaremos muy
-                    agradecidos.
-
-                </p>
+                <p>{{regalos.texto}}</p>
             </div>
             <h3 class="numeroR">
-                <h4>Santander</h4>
-                Dulce Ramirez (Novia) <br>
-                1122 3344 5566 7788<br>  
+                </h3><h4>{{regalos.banco1}}</h4>
+                {{regalos.titular1}} <br>
+                {{regalos.cuenta1}}<br>  
 
                 <br>
 
-                <h4>Zelle</h4>
-                Jaime Gomez (Novio)
+                <h4>{{regalos.banco2}}</h4>
+                {{regalos.titular2}}
                 <br>
-                1122 3344 5566 7788
+                {{regalos.cuenta2}}
                 <br>
                 
-            </h3>
+            
         </div>
 
         <div class="padrinos">
             <div class="card" style="width: 80%; height: 50%; align-items: center;;">
-                <div class="nombresPadrinos">Fabiola y Jaime Juarez</div>
-                <img src="recursos/port1.jpg" class="card-img-top" alt="...">
+                <div class="nombresPadrinos">{{padrinos.nombres}}</div>
+                <img src="{{padrinos.foto}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h2 class="padrinosTexto">
-                        Queridos padrinos
-                    </h2>
-                    <p class="card-text">
-                        Con gratitud infinita, queremos agradecerles por formar
-                        parte esencial de este momento tan especial.
-                        Su apoyo y cariño nos acompañan en el inicio de esta
-                        hermosa etapa, y siempre los llevaremos en nuestro corazón.</p>
+                    <h2 class="padrinosTexto">{{padrinos.titulo}}</h2>
+                    <p class="card-text">{{padrinos.texto}}</p>
                 </div>
             </div>
         </div>
@@ -222,53 +170,44 @@
 
         <div class="confirmar">
             <div class="tituloConfirmar">
-                <h2>Confirmar Asistencia</h2>
+                <h2>{{confirmacion.titulo}}</h2>
 
-                <p>Nos encantaria contar con tu presencia, es por eso que te
-                    pedimos que confirmes asistencia antes del 5 de mayo.
-                    <br>
-                    <br>
-                    <small></small>
-                </p>
+                <p>{{confirmacion.texto}}</p>
 
             </div>
 
             <div class="botones">
                 <button type="button" class="btn btn-light">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-calendar-heart" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM1 14V4h14v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1m7-6.507c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-heart" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM1 14V4h14v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1m7-6.507c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"></path>
                     </svg>
 
-                    <a
-                        href="">Confirmar
-                        Asistencia (Novio)</a>
+                    <a href="{{confirmacion.linkNovio}}">{{confirmacion.botonNovio}}</a>
                 </button>
 
                 <button type="button" class="btn btn-light">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-calendar-heart" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM1 14V4h14v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1m7-6.507c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-heart" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM1 14V4h14v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1m7-6.507c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"></path>
                     </svg>
 
-                    <a
-                        href="">Confirmar
-                        Asistencia (Novia)</a>
+                    <a href="{{confirmacion.linkNovia}}">{{confirmacion.botonNovia}}</a>
                 </button>
 
             </div>
         </div>
 
         <div class="musica">
-            <audio id="musica1" controls loop>
-                <source src="/recursos/Julión Álvarez - Lo Tienes Todo (Versión Piano) (LETRA) - Suena Mi Banda.mp3">
-                Este navegador no acepta formatos de audio
+            <audio id="musica1" controls="" loop="">
+                <source src="{{musica.archivo}}">
+                {{musica.sinSoporte}}
             </audio>
         </div>
 
     </div>
-</body>
 
+      <script src="script.js"></script>
+    </template>
+
+    <script src="motor.js"></script>
+  </body>
 </html>

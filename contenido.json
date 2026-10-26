@@ -1,0 +1,83 @@
+{
+  "_instrucciones": "Aquí se cambian TODOS los textos, fotos, links y datos de la invitación. Cambia solo lo que está a la derecha de los dos puntos. Los textos aceptan <br /> para saltos de línea. Para ocultar un grupo agrega \"mostrar\": false dentro de él solo si la plantilla lo permite. La fecha de evento.inicio (AAAA-MM-DDTHH:MM) la usan la cuenta regresiva y el calendario.",
+  "pagina": {
+    "titulo": "Invitacion Elegante"
+  },
+  "evento": {
+    "inicio": "2027-07-05T18:00"
+  },
+  "portada": {
+    "foto": "recursos/portada1.jpeg",
+    "fotoAlt": "portada",
+    "evento": "Nuestra Boda",
+    "nombre1": "Dulce",
+    "conector": "y",
+    "nombre2": "Jaime"
+  },
+  "cuentaRegresiva": {
+    "frase": "Despues de tantas historias, risas y sueños, estamos listos para dar el gran paso y unir nuestras vidas para siempre",
+    "fecha": "05 - Julio - 2025",
+    "titulo": "Nuestra boda es en:",
+    "dias": "Días",
+    "horas": "Horas",
+    "minutos": "Minutos",
+    "segundos": "Segundos"
+  },
+  "bienvenida": {
+    "titulo": "Mas valen dos que uno...",
+    "verso1": "Porque obtiene más fruto<br> de su esfuerzo",
+    "verso2": "Si caen, el uno levanta al otro.<br>",
+    "verso3": "¡Ay del que cae <br>y no tiene quien lo levante!",
+    "verso4": "Uno solo puede ser vencido,<br> pero dos pueden resistir.",
+    "verso5": "¡La cuerda de tres hilos <br> no se rompe fácilmente!",
+    "cita": "Eclesiastés 4:9-12",
+    "foto": "recursos/001-12.jpg"
+  },
+  "vestimenta": {
+    "titulo": "Codigo de vestimenta",
+    "codigo": "Beach Formal",
+    "recomendacion": "Hombre: Guayabera <br> Te dejamos unas ideas de pinterest",
+    "linkHombre": "",
+    "botonHombre": "Ver ejemplos de Hombre",
+    "linkMujer": "",
+    "botonMujer": "Ver ejemplos de Mujer"
+  },
+  "ubicaciones": {
+    "titulo": "Ubicacion del evento",
+    "texto": "En el corazón de Mazatlán, junto al hermoso mar, nos reuniremos en este espacio único para celebrar un día lleno de amor y felicidad. Esperamos contar con tu presencia para hacer de este momento algo inolvidable.",
+    "foto": "/recursos/hotal.jpg",
+    "lugar": "Park Royal Beach Mazatlan",
+    "direccion": "Av. sabalo Cerritos 3110, Marina Mazatlan, 82100 Mazatlan, Sin.",
+    "mapa": "#",
+    "boton": "Ubicacion",
+    "nota": "<small>Todos los eventos seran en el hotel Park Royal Beach</small>"
+  },
+  "regalos": {
+    "titulo": "Mesa de regalos",
+    "texto": "Que nos acompañes es lo mas importante! Y si está en su disposición realizar una muestra de cariño estaremos muy agradecidos.",
+    "banco1": "Santander",
+    "titular1": "Dulce Ramirez (Novia)",
+    "cuenta1": "1122 3344 5566 7788",
+    "banco2": "Zelle",
+    "titular2": "Jaime Gomez (Novio)",
+    "cuenta2": "1122 3344 5566 7788"
+  },
+  "padrinos": {
+    "nombres": "Fabiola y Jaime Juarez",
+    "foto": "recursos/port1.jpg",
+    "titulo": "Queridos padrinos",
+    "texto": "Con gratitud infinita, queremos agradecerles por formar parte esencial de este momento tan especial. Su apoyo y cariño nos acompañan en el inicio de esta hermosa etapa, y siempre los llevaremos en nuestro corazón."
+  },
+  "confirmacion": {
+    "titulo": "Confirmar Asistencia",
+    "texto": "Nos encantaria contar con tu presencia, es por eso que te pedimos que confirmes asistencia antes del 5 de mayo. <br> <br> <small></small>",
+    "linkNovio": "",
+    "botonNovio": "Confirmar Asistencia (Novio)",
+    "linkNovia": "",
+    "botonNovia": "Confirmar Asistencia (Novia)"
+  },
+  "musica": {
+    "archivo": "/recursos/Julión Álvarez - Lo Tienes Todo (Versión Piano) (LETRA) - Suena Mi Banda.mp3",
+    "sinSoporte": "Este navegador no acepta formatos de audio"
+  }
+}
